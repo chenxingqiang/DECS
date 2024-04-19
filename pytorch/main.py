@@ -6,9 +6,13 @@ from pytorch import *
 
 def main():
     # Load data (you need to replace this part with your own data loading code)
-    data = sio.loadmat("datasets/enron.mat")
+    data = sio.loadmat(
+        "/Users/xingqiangchen/PyProjects/Di-HGNN/DECS/datasets/enron.mat"
+    )
     W_Cube = data["W_Cube"]
-    data = sio.loadmat("datasets/firststep_DYNMOGA_enron.mat")
+    data = sio.loadmat(
+        "/Users/xingqiangchen/PyProjects/Di-HGNN/DECS/datasets/firststep_DYNMOGA_enron.mat"
+    )
     GT_Cube = data["dynMoeaResult"]
 
     # Parameter setting
@@ -45,7 +49,7 @@ def main():
             DECS_Result[(timestep_num, r)],
             dynTime[timestep_num, r],
         ) = DECS_1(
-            W_Cube[0, timestep_num],
+            torch.from_numpy(W_Cube[0, timestep_num]),
             maxgen,
             pop_size,
             p_mutation,
@@ -70,7 +74,7 @@ def main():
                 DECS_Result[(timestep_num, r)],
                 dynTime[timestep_num, r],
             ) = DECS_2(
-                W_Cube[0, timestep_num],
+                torch.from_numpy(W_Cube[0, timestep_num]),
                 maxgen,
                 pop_size,
                 p_mutation,
