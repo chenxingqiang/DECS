@@ -26,8 +26,6 @@ function [x] = PGLP(node_num, el, iters)
 end
 
 function [x] = perturbation(x)
-    %��һ��ϵ�е�Ԫ��˳�����
-    %%
     n = length(x);
     i = n;
 
