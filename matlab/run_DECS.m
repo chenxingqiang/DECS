@@ -55,12 +55,12 @@ for r = 1:num_repeat
     end
 
     disp(['timestep = ', num2str(timestep_num), ', Modularity = ', ...
-              num2str(dynMod(timestep_num, r)), ', NMI = ', num2str(dynNmi(timestep_num, r))]);
+                num2str(dynMod(timestep_num, r)), ', NMI = ', num2str(dynNmi(timestep_num, r))]);
 
     %% DECS optimizes the modularity and NMI in the following time steps
     for timestep_num = 2:num_timestep
         [dynMod(timestep_num, r), dynPop{timestep_num, r}, DECS_Result{timestep_num, r}, ...
-             dynTime(timestep_num, r)] = DECS_2(W_Cube{timestep_num}, maxgen, pop_size, ...
+                dynTime(timestep_num, r)] = DECS_2(W_Cube{timestep_num}, maxgen, pop_size, ...
             p_mutation, p_migration, p_mu_mi, num_neighbor, DECS_Result{timestep_num - 1, r}, PGLP_iter);
 
         if flag == 1
@@ -70,7 +70,7 @@ for r = 1:num_repeat
         end
 
         disp(['timestep = ', num2str(timestep_num), ', Modularity = ', ...
-                  num2str(dynMod(timestep_num, r)), ', NMI = ', num2str(dynNmi(timestep_num, r))]);
+                num2str(dynMod(timestep_num, r)), ', NMI = ', num2str(dynNmi(timestep_num, r))]);
     end
 
 end

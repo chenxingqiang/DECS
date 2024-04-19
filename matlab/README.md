@@ -4,7 +4,7 @@ Implementation of "[Detecting the Evolving Community Structure in Dynamic Social
 
 If you find this method helpful for your research, please cite this paper.
 
-    @Article{Liu2019, 
+    @Article{Liu2019,
      author = {Fanzhen Liu and Jia Wu and Shan Xue and Chuan Zhou and Jian Yang and Quanzheng Sheng},
      journal = {World Wide Web},
      title = {Detecting the Evolving Community Structure in Dynamic Social Networks},
@@ -62,7 +62,7 @@ Before run the `run_DECS.m`, please choose a network to load and properly set co
 
 The `W_Cube.mat` records the adjacent matrices of a dynamic network in several time steps, the `GT_Cube.mat` or `GT_Matrix.mat` records the ground truth community structures of a synthetic network in all time steps. For Real-world networks without ground truth community structures, the `firststep_DYNMOGA_cell.mat` and `firststep_DYNMOGA_enron.mat` record the community structures detected by the first step of DYNMOGA (Folino and Pizzuti 2014) in all timesteps as the ground truth community structures.
 
-Finally, `DECS_Result` records the community structures detected by DECS in all time steps; `DynMod` and `DynNmi` record the modularity of the detected community structure at each time step and the NMI that measures the similarity between a detected community structure and the ground truth at each time step, respectively.  
+Finally, `DECS_Result` records the community structures detected by DECS in all time steps; `DynMod` and `DynNmi` record the modularity of the detected community structure at each time step and the NMI that measures the similarity between a detected community structure and the ground truth at each time step, respectively.
 
 ----------
 
