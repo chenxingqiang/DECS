@@ -972,7 +972,7 @@ def Initial_PGLP(population_size, adj_mat, node_num, PGLP_iter):
     """
     chromosome = [
         {"genome": None, "clusters": None, "fitness_1": None, "fitness_2": None}
-       for _ in range(population_size)
+        for _ in range(population_size)
     ]
     pop_X = torch.zeros((population_size, node_num), dtype=torch.int64)
 
