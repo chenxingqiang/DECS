@@ -7,11 +7,11 @@ from pytorch import *
 def main():
     # Load data (you need to replace this part with your own data loading code)
     data = sio.loadmat(
-        "/Users/xingqiangchen/PyProjects/Di-HGNN/DECS/datasets/enron.mat"
+        "./DECS/datasets/enron.mat"
     )
     W_Cube = data["W_Cube"]
     data = sio.loadmat(
-        "/Users/xingqiangchen/PyProjects/Di-HGNN/DECS/datasets/firststep_DYNMOGA_enron.mat"
+        "./DECS/datasets/firststep_DYNMOGA_enron.mat"
     )
     GT_Cube = data["dynMoeaResult"]
 
